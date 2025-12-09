@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+parameters: 
+  - name: run_stage_2
+    type: boolean
+    default: true
+stages:
+  - stage: stage1
+    jobs:
+    - job: job1
+      steps:
+        - script: echo over stage1
+
+  - stage: stage2
+    condition: eq(${{parameters.run_stage_2}},true)
+    jobs:
+    - job: job1
+      steps:
+                - script: echo over stage2                
+ 
