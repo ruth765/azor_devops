@@ -1,0 +1,32 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: :'my-agent-pool'
+
+
+stages:
+  - stage: stage1
+    jobs: 
+      - job: job1
+        steps:
+        - script: echo stage1 job1 
+      - job: job2
+        steps:
+         - script: echo  stage2 job2 
+  - stage: stage2
+    jobs:
+      - job: job1
+        steps:
+          - script: echo  stage2 job2 
+      - job: job2
+        steps:
+          - script: echo  stage2 job2 
+
+
+
