@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: :'my-agent-pool'
+  name: 'my-agent-pool'
 
 
 stages:
