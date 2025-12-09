@@ -4,10 +4,10 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- none
 
 pool:
-  vmImage: ubuntu-latest
+  name: 'my-agent-pool' 
 parameters: 
   - name: run_stage_2
     type: boolean
