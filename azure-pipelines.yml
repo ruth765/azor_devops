@@ -3,16 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
+trigger: 
+  none
 
 pool:
-  vmImage: "my_agent_pool"
-  stages:
-    Stage: one stage
-  jobs:
-    job : one  
-    steps:
-      script: echo Hello from my first pipeline!
+ name: 'my-agent-pool'
+stages:
+  - stage: one_stage
+    jobs:
+      - job : one_job 
+        steps:
+          - script: echo Hello from my first pipeline!
 
 
