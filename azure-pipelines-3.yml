@@ -20,7 +20,7 @@ variables:
   greet : hello ${{parameters.name}} you are ${{parameters.age}} years old
 
 stages:
-  - stage: s
+  - stage: st
     jobs:
       - job: j
         steps:
