@@ -4,10 +4,12 @@
 # https://aka.ms/yaml
 
 trigger:
-- nane
+- none
 
 pool: 
-  -name: 'my-agent-pool'
+  name: 'my-agent-pool'
+
+  
 parameters: 
   - name: name1
     type: string
